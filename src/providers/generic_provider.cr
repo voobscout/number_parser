@@ -9,12 +9,12 @@ abstract class NumberParser::GenericProvider
     str
   end
 
-  private abstract def preprocess(str, ignore)
-  private abstract def numerize_numerals(str, ignore, bias)
-  private abstract def numerize_fractions(str, ignore, bias)
-  private abstract def numerize_ordinals(str, ignore, bias)
-  private abstract def numerize_big_prefixes(str, ignore, bias)
-  private abstract def postprocess(str, ignore)
+  private abstract def preprocess(string, ignore)
+  private abstract def numerize_numerals(string, ignore, bias)
+  private abstract def numerize_fractions(string, ignore, bias)
+  private abstract def numerize_ordinals(string, ignore, bias)
+  private abstract def numerize_big_prefixes(string, ignore, bias)
+  private abstract def postprocess(string, ignore)
 
   # Turns list of words into a unionized list, ignoring words specified in
   # arguments or that meet the conditions of the yield block
